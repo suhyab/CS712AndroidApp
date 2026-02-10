@@ -10,7 +10,7 @@ explicit intents, and implicit intents using Jetpack Compose.
 ## Device / Emulator Used
 
 - Device: Samsung Galaxy S24
-- Android Version: 16
+- Android Version: 16 (Baklva)
 
 ## App Status
 
