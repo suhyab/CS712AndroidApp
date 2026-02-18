@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "csci_712.assignment_2"
+    namespace = "csci_712.main"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "csci_712.assignment_2"
+        applicationId = "csci_712.main"
         minSdk = 27
         targetSdk = 36
         versionCode = 1

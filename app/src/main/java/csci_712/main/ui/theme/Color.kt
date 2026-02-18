@@ -1,4 +1,4 @@
-package csci_712.assignment_2.ui.theme
+package csci_712.main.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

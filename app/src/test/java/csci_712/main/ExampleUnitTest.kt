@@ -1,4 +1,4 @@
-package csci_712.assignment_2
+package csci_712.main
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package csci_712.assignment_2
+package csci_712.main
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("csci_712.assignment_2", appContext.packageName)
+        assertEquals("csci_712.main", appContext.packageName)
     }
 }
