@@ -23,6 +23,7 @@ import androidx.core.content.ContextCompat
 import android.os.Build
 import android.content.IntentFilter
 import android.content.Context
+import androidx.core.content.ContextCompat.startActivity
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -103,6 +104,13 @@ fun MainScreen() {
             context.sendBroadcast(intent)
         }) {
             Text("Send Broadcast")
+        }
+
+        Button(onClick = {
+            val intent = Intent(context, ImageActivity::class.java)
+            context.startActivity(intent)
+        }) {
+            Text("View Image Activity")
         }
 
     }
