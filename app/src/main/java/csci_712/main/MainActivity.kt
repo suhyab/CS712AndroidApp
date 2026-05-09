@@ -23,6 +23,7 @@ import androidx.core.content.ContextCompat
 import android.os.Build
 import android.content.IntentFilter
 import android.content.Context
+import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 
 class MainActivity : ComponentActivity() {
@@ -49,6 +50,14 @@ class MainActivity : ComponentActivity() {
         val filter = IntentFilter("csci_712.main.MY_ACTION")
         registerReceiver(myReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
 
+        if (ContextCompat.checkSelfPermission(
+                this,
+                "csci_712.main.MSE712"
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            permissionLauncher.launch("csci_712.main.MSE712")
+        }
+
         setContent {
             MainScreen()
         }
@@ -60,6 +69,16 @@ class MainActivity : ComponentActivity() {
         super.onStop()
         unregisterReceiver(myReceiver)
     }
+
+    private val permissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+
+            if (isGranted) {
+                // Permission granted
+            } else {
+                // Permission denied
+            }
+        }
 
 }
 
